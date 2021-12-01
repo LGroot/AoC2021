@@ -4,9 +4,10 @@
 #include <numeric>
 #include <algorithm>
 #include <functional>
+#include <filesystem>
 
-int main() {
-  std::ifstream input("input");
+int main(int, char* argv[]) {
+  std::ifstream input(std::filesystem::path{argv[0]}.parent_path() / "input");
   std::string line;
   std::vector<int> readings;
   while (std::getline(input, line)) {
