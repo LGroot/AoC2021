@@ -33,7 +33,7 @@ int main(int, char* argv[]) {
   auto common = [](auto gas, std::array<char,2> bits) {
     for (int i=0; gas.size()>1; ++i) {
       unsigned int count = std::count_if(gas.begin(), gas.end(), [i](auto&& number){ return number[i] == '1'; });
-      char filter = count >= (gas.size()+1)/2 ? bits[0] : bits[1];
+      char filter = count*2 >= gas.size() ? bits[0] : bits[1];
       gas.erase(std::remove_if(gas.begin(), gas.end(), [i,filter](auto&& number){ return number[i] != filter; }), gas.end());
     }
     return std::stoi(gas.front(), 0, 2);
