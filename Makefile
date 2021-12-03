@@ -1,5 +1,5 @@
 SUBDIRS := $(wildcard day*)
-CXXFLAGS = -O3 -g -march=native -pedantic -Wall -Wextra
+CXXFLAGS = -std=c++20 -O3 -g -march=native -pedantic -Wall -Wextra
 
 all: $(SUBDIRS)
 
