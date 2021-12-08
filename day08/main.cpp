@@ -34,7 +34,7 @@ int main(int, char* argv[]) {
         });
     }); 
 
-  std::cout << "Day 07 part 1: " << part1 << "\n"; 
+  std::cout << "Day 08 part 1: " << part1 << "\n"; 
 
   const auto part2 = std::accumulate(displays.begin(), displays.end(), 0, 
     [](auto acc, auto&& display) {
@@ -77,5 +77,5 @@ int main(int, char* argv[]) {
         });
     }); 
 
-  std::cout << "Day 07 part 2: " << part2 << "\n";
+  std::cout << "Day 08 part 2: " << part2 << "\n";
 }
