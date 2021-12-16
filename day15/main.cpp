@@ -38,7 +38,7 @@ int main(int, char* argv[]) {
     }
   };
 
-  auto part1 = search_path(grid);
+  const auto part1 = search_path(grid);
   std::cout << "Day 15 part 1: " << part1 << "\n"; 
 
   constexpr int scale = 5;
@@ -56,6 +56,6 @@ int main(int, char* argv[]) {
     }
   } 
 
-  auto part2 = search_path(grid2);
+  const auto part2 = search_path(grid2);
   std::cout << "Day 15 part 2: " << part2 << "\n"; 
 }
