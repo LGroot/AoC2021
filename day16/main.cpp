@@ -118,8 +118,8 @@ int main(int, char* argv[]) {
     } 
   }
 
-  std::cout << "Day 15 part 1: " << total_version << "\n"; 
+  std::cout << "Day 16 part 1: " << total_version << "\n"; 
 
   const auto part2 = packets.front().apply();
-  std::cout << "Day 15 part 2: " << part2 << "\n"; 
+  std::cout << "Day 16 part 2: " << part2 << "\n"; 
 }
