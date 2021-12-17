@@ -1,11 +1,12 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <numeric>
 #include <algorithm>
-#include <functional>
-#include <filesystem>
 #include <cmath>
+#include <filesystem>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <numeric>
+#include <string>
+#include <vector>
 
 int main(int, char* argv[]) {
   std::ifstream input(std::filesystem::path{argv[0]}.parent_path() / "input");

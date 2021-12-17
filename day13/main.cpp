@@ -1,11 +1,12 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <numeric>
 #include <algorithm>
-#include <functional>
 #include <filesystem>
+#include <fstream>
+#include <iostream>
+#include <iterator>
 #include <set>
+#include <string>
+#include <utility>
+#include <vector>
 
 int main(int, char* argv[]) {
   std::ifstream input(std::filesystem::path{argv[0]}.parent_path() / "input");
@@ -39,7 +40,7 @@ int main(int, char* argv[]) {
     }
     std::set<std::pair<int,int>> newgrid; 
     std::transform(grid.begin(), grid.end(), std::inserter(newgrid, newgrid.begin()), 
-      [axis,val](auto&& point){
+      [axis=axis,val=val](auto&& point){
         auto [x,y] = point;
         if (axis == 'x' && x > val) {
           return std::make_pair(2*val-x, y);
