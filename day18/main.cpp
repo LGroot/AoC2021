@@ -1,9 +1,12 @@
+#include <algorithm>
+#include <cstddef>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include <numeric>
 #include <string>
-#include <variant>
+#include <utility>
 #include <vector>
 
 struct token {
